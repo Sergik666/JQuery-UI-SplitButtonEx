@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--meta charset="utf-8"-->
+	<title>JQuery UI Spit button menu Samples</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+	<!--script src="https://raw.github.com/Sergik666/JQuery-UI-Message-Box/master/src/js/jquery-ui-messageBox.js" type="text/javascript"></script-->
+	<script src="../src/js/jquery-ui-spitButtonEx.js"></script>
+
+	
+
+</head>
+<body>
+	<H1>JQuery UI Spit button Extended Samples</H1>
+
+	<button id='button1'>Button1</button>
+
+	<script>
+		$(function() {
+			$("#button1").spitButtonEx(
+				{
+					click : function(){ alert("it's works!")},
+					menuButtons : [
+						{
+							caption:'sub button 1',
+							click : function() {alert("sub button 1 clicked")}
+						},
+					 	{
+					 		caption:'sub button 2',
+							click : function() {alert("sub button 2 clicked")}
+					 	},
+					 	{caption:'sub button 3'} ]
+				});
+		});		
+	
+	</script>	
+
+</body>
+</html>
