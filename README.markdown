@@ -1,2 +1,2 @@
-## jQuery  UI Spit button Extended
+## jQuery UI Split button Extended
 
