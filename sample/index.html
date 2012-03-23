@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!--meta charset="utf-8"-->
-	<title>JQuery UI Spit button menu Samples</title>
+	<title>JQuery UI Split button menu Samples</title>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
@@ -10,31 +10,42 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
 
 	<!--script src="https://raw.github.com/Sergik666/JQuery-UI-Message-Box/master/src/js/jquery-ui-messageBox.js" type="text/javascript"></script-->
-	<script src="../src/js/jquery-ui-spitButtonEx.js"></script>
-
-	
+	<script src="../src/js/jquery-ui-splitButtonEx.js"></script>
 
 </head>
 <body>
-	<H1>JQuery UI Spit button Extended Samples</H1>
+	<H1>JQuery UI Split button Extended Samples</H1>
+
+	<style type="text/css">
+		.button1Image{
+			background-image: url('img/packageNetwork.png') !important;
+		}
+	</style>
 
 	<button id='button1'>Button1</button>
 
 	<script>
 		$(function() {
-			$("#button1").spitButtonEx(
+			$("#button1").splitButtonEx(
 				{
+					buttonSettings : {
+						text:true,
+						icons: {
+							primary: "button1Image"
+					}},
 					click : function(){ alert("it's works!")},
 					menuButtons : [
 						{
 							caption:'sub button 1',
-							click : function() {alert("sub button 1 clicked")}
+							click : function() {alert("sub button 1 clicked")},
+							imageUrl: 'img/facebook.png'
 						},
 					 	{
 					 		caption:'sub button 2',
-							click : function() {alert("sub button 2 clicked")}
+							click : function() {alert("sub button 2 clicked")},
+							imageUrl: 'img/networktool.png'
 					 	},
-					 	{caption:'sub button 3'} ]
+					 	{caption:'sub button 3', imageUrl: 'img/SocialNetwork.png'} ]
 				});
 		});		
 	
